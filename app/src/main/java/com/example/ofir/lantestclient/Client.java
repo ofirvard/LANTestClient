@@ -41,15 +41,16 @@ public class Client extends AppCompatActivity
         if (hex.length() == 8)
         {
             String roomIP = "";
-            for (int i = 0; i < hex.length(); i = i + 2)
-            {
-                roomIP = roomIP + Integer.valueOf(hex.substring(i, i + 2), 16) + ".";
-            }
+            roomIP += Integer.valueOf(hex.substring(0, 2), 16) + ".";
+            roomIP += Integer.valueOf(hex.substring(2, 4), 16) + ".";
+            roomIP += Integer.valueOf(hex.substring(4, 6), 16) + ".";
+            roomIP += Integer.valueOf(hex.substring(6, 8), 16);
+
             String text = "Your IPv4: " + myIP + "\nRoom IP: " + roomIP;
             ip.setText(text);
 
             Connector connector = new Connector();
-            connector.execute(roomIP);
+            connector.execute(roomIP, myIP);
         }
     }
 }

@@ -17,10 +17,11 @@ public class Connector extends AsyncTask<String, Void, String>
     {
         try
         {
-            InetAddress inet = InetAddress.getByName(strings[0]);
-            Socket socket = new Socket(inet, 1755);
+//            InetAddress inet = InetAddress.getByName(strings[0]);
+            InetAddress inet = InetAddress.getByName("192.168.1.106");
+            Socket socket = new Socket(inet, 9153);
             DataOutputStream DOS = new DataOutputStream(socket.getOutputStream());
-            DOS.writeUTF("HELLO_WORLD");
+            DOS.writeUTF("Hi my name is " + strings[1]);
             socket.close();
         }
         catch (Exception e)
