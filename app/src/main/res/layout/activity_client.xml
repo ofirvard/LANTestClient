@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ofir.lantestclient.Client"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/ip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/guide40"
+        app:layout_constraintEnd_toStartOf="@+id/guide_end"
+        app:layout_constraintStart_toStartOf="@+id/guide_start"
+        app:layout_constraintTop_toBottomOf="@+id/guide20"/>
+
+    <EditText
+        android:id="@+id/room"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Room"
+        android:inputType="textVisiblePassword"
+        android:text="c0a8016a"
+        app:layout_constraintBottom_toTopOf="@+id/guide60"
+        app:layout_constraintEnd_toStartOf="@+id/guide_end"
+        app:layout_constraintStart_toEndOf="@+id/guide_start"
+        app:layout_constraintTop_toBottomOf="@+id/guide40"/>
+
+    <Button
+        android:id="@+id/connect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="connect"
+        android:text="Connect"
+        app:layout_constraintBottom_toTopOf="@+id/guide80"
+        app:layout_constraintEnd_toStartOf="@+id/guide_end"
+        app:layout_constraintStart_toEndOf="@+id/guide_start"
+        app:layout_constraintTop_toBottomOf="@+id/guide60"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.20"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.80"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.40"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.60"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.80"/>
+</android.support.constraint.ConstraintLayout>
